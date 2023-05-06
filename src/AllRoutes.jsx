@@ -5,8 +5,8 @@ import Sales from './pages/Sales/Sales'
 import Services from './pages/Services/Services'
 import Contact from './pages/Contacts/Contact'
 import Landingpage from './pages/Landingpage/Landingpage'
+import Cart from './pages/Cart/cart'
 import OrderNowForm from './pages/OrderNowForm/OrderNowForm'
-
 
 
 function AllRoutes() {
@@ -17,6 +17,7 @@ function AllRoutes() {
         <Route path='/sales' element={<Sales />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/cart' element={<Cart/>}/>
         <Route path='/sales/:id' element={<OrderNowForm />} />
     </Routes>  
   )

@@ -11,6 +11,7 @@ const Nav = () =>
       { name: "SALES" },
       { name: "SERVICES" },
       { name: "CONTACT" },
+      {name: "CART"},
    ]
    return (
       <nav className="flex items-center justify-between pt-5">
