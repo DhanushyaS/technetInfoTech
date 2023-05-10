@@ -9,6 +9,12 @@ module.exports = {
       backgroundImage: {
         'hero-bg': "url('D:/consult//technet/src/assets/background.jpg')"
       },
+      colors: {
+        blue: "#2CBCE9",
+        red: "#DC4492",
+        yellow: "#FDCC49",
+      },
+      
       fontFamily: {
         Barlow: "Barlow Condensed, sans-serif",
         Bellefair: "Bellefair"

@@ -89,25 +89,30 @@
     font-weight: bold;
   }
   
-  .cart-clear:hover {
+  /* .cart-clear:hover {
     background-color: #9c9c8d;
     color:rgb(231, 227, 227);
     height: 5rem;
     width: 14rem;
     font-weight: bold;
-  }
+  } */
   
   .inc_butt{
     width: 3rem;
-    background-color: red;
-    border:groove ;
+    background-color: green;
     border-radius: 5px;
     color:white;
   }
   .dec_butt{
     width: 3rem;
-    background-color:green;
-    border:groove ;
+    background-color: red;
     border-radius: 5px;
     color:white;
+  }
+  .btn1{
+    display: inline-block;
+    margin-right: 30px;
+    padding-left: 50px;
+    justify-content: center;
+    align-items: center;
   }

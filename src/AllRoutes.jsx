@@ -7,8 +7,6 @@ import Contact from './pages/Contacts/Contact'
 import Landingpage from './pages/Landingpage/Landingpage'
 import Cart from './pages/Cart/cart'
 import OrderNowForm from './pages/OrderNowForm/OrderNowForm'
-
-
 function AllRoutes() {
   return (
     <Routes>

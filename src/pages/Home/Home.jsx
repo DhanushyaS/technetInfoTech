@@ -8,9 +8,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../Home/Home.css';
 import Rotate from 'react-reveal/Rotate';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper';
+import { motion } from "framer-motion";
 
 export default function Home() {
   const progressCircle = useRef(null);
@@ -53,22 +54,7 @@ export default function Home() {
           <span ref={progressContent}></span>
         </div>
       </Swiper>
-      {/* <div className="bg-hero-bg md:h-screen bg-cover bg-center font-Barlow pb-2" style={{maxHeight:"100%"}}>
-        <div className="wrapper two">
-        <div class="neon">
-            <h3>ABOUT US</h3>
-            </div>
-            </div>
-            <div className='about bg-hero-bg bg-center font-Barlow pb-12' style={{fontFamily:'fantasy'}}>
-            <h1 style={{textAlign:'center',fontSize:'30px',fontWeight:300,color:'white'}}><b>Technet Infotech in Erode HO, Erode</b></h1>
-            <p style={{textAlign:'center',fontSize:'20px',color:'white'}}>Technet Infotech in Erode is one of the leading businesses in the Computer Software Dealers. Also known for Computer Repair &amp; Services, Computer Dealers, Laptop Dealers, Laptop Repair &amp; Services, Computer Printer Dealers, Second Hand Laptop Dealers, Laptop Repair &amp; Services-Acer, Laptop Repair &amp; Services-Dell and much more. Find Address, Contact Number, Reviews &amp; Ratings, Photos, Maps of Technet Infotech, Erode.</p>
-            <h2 style={{textAlign:'center',fontSize:'30px',color:'white'}}><b>Location and Overview</b></h2>
-            <p style={{textAlign:'center',fontSize:'20px',color:'white'}}>Established in the year 2013, Technet Infotech in Erode HO, Erode is a top player in the category Computer Software Dealers in the Erode. This well-known establishment acts as a one-stop destination servicing customers both local and from other parts of Erode. Over the course of its journey, this business has established a firm foothold in it’s industry. The belief that customer satisfaction is as important as their products and services, have helped this establishment garner a vast base of customers, which continues to grow by the day. This business employs individuals that are dedicated towards their respective roles and put in a lot of effort to achieve the common vision and larger goals of the company. In the near future, this business aims to expand its line of products and services and cater to a larger client base. In Erode, this establishment occupies a prominent location in Erode HO. It is an effortless task in commuting to this establishment as there are various modes of transport readily available. It is at Agilmedu 6th Street, Near Ajantha International, which makes it easy for first-time visitors in locating this establishment. It is known to provide top service in the following categories: Computer Repair &amp; Services, Computer Dealers, Laptop Dealers, Laptop Repair &amp; Services, Computer Printer Dealers, Second Hand Laptop Dealers, Laptop Repair &amp; Services-Acer, Laptop Repair &amp; Services-Dell.</p>
-            <h2 style={{textAlign:'center',fontSize:'30px',color:'white'}}><b>Products and Services offered</b></h2>
-            <p style={{textAlign:'center',fontSize:'20px',color:'white'}}>Technet Infotech in Erode HO has a wide range of products and / or services to cater to the varied requirements of their customers. The staff at this establishment are courteous and prompt at providing any assistance. They readily answer any queries or questions that you may have. Pay for the product or service with ease by using any of the available modes of payment, such as Cash, Master Card, Visa Card, Cheques. This establishment is functional from 9:00 - 20:00. </p>
-        </div>
-    </div> */}
-    <div className="bg-hero-bg md:h-screen bg-cover bg-center font-Barlow pb-2" style={{maxHeight:"100%"}}>
+    {/* <div className="bg-hero-bg md:h-screen bg-cover bg-center font-Barlow pb-2" style={{maxHeight:"100%"}}>
     <div className='about' style={{color:'whitesmoke'}}>
     <h1>
         <Rotate top left cascade>
@@ -88,7 +74,85 @@ export default function Home() {
         <p style={{textAlign:'center',fontSize:'20px',fontWeight:100,color:'white'}}>Established in the year 2013, Technet Infotech in Erode HO, Erode is a top player in the category Computer Software Dealers in the Erode. The belief that customer satisfaction is as important as their products and services, have helped this establishment garner a vast base of customers, which continues to grow by the day. This business employs individuals that are dedicated towards their respective roles and put in a lot of effort to achieve the common vision and larger goals of the company. In the near future, this business aims to expand its line of products and services and cater to a larger client base. In Erode, this establishment occupies a prominent location in Erode HO. It is an effortless task in commuting to this establishment as there are various modes of transport readily available. It is at Agilmedu 6th Street, Near Ajantha International, which makes it easy for first-time visitors in locating this establishment. It is known to provide top service in the following categories: Computer Repair &amp; Services, Computer Dealers, Laptop Dealers, Laptop Repair &amp; Services, Computer Printer Dealers, Second Hand Laptop Dealers, Laptop Repair & Services-Acer, Laptop Repair & Services-Dell.</p>
         </Fade>
       </div>
-    </div>
+    </div> */}
+    <div className="md:flex md:justify-between mt-16 gap-32 ">
+        {/* EXPERIENCE */}
+        <motion.div
+          className="md:w-1/3 mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <div className="relative h-32">
+            <div className="z-10">
+              <p className="font-playfair font-semibold text-5xl text-black">01</p>
+              <p className="font-playfair font-semibold text-3xl mt-3 text-black">
+                About
+              </p>
+            </div>
+            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
+          </div>
+          <p className="mt-5 text-black">
+          Technet Infotech is one of the leading businesses in the Computer Software Dealers. Also known for Computer Repair & Services, Laptop Dealers, Laptop Services, Printer Dealers, Second Hand Laptop Dealers and much more.
+          </p>
+        </motion.div>
+
+        {/* INNOVATIVE */}
+        <motion.div
+          className="md:w-1/3 mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <div className="relative h-32">
+            <div className="z-10">
+              <p className="font-playfair font-semibold text-5xl text-black">02</p>
+              <p className="font-playfair font-semibold text-3xl mt-3 text-black">
+                Vision
+              </p>
+            </div>
+            <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
+          </div>
+          <p className="mt-5 text-black">
+          We are No.1 in Tamilnadu presence for Laptop Service. Hope, we will be No.1 in India with in 2 years.
+          </p>
+        </motion.div>
+        {/* IMAGINATIVE */}
+        <motion.div
+          className="md:w-1/3 mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <div className="relative h-32">
+            <div className="z-10">
+              <p className="font-playfair font-semibold text-5xl text-black">03</p>
+              <p className="font-playfair font-semibold text-3xl mt-3 text-black">
+                Mission
+              </p>
+            </div>
+          <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
+          </div>
+          <p className="mt-5 text-black">
+          We will make Technet Infotech as a one of the cash rich company in India, through that we will educate over 1000+ poor students annually. One day Technet Infotech growth will be a case study for IIM Students.
+          </p>
+        </motion.div>
+      </div>
       </section>
     </>
   );

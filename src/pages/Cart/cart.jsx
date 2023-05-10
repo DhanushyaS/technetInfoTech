@@ -1,11 +1,12 @@
 import Nav from "../../components/Nav";
 import React from 'react';
 import './cart.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cart() {
   const [data, setData] = React.useState([]);
   // const [totalPrice, setTotalPrice] = React.useState(0);
-
+  const navigate = useNavigate();
   React.useEffect(() => {
     const getData = async () => {
       const datas = await localStorage.getItem('cart');
@@ -36,6 +37,10 @@ export default function Cart() {
   
   };
 
+  const orderNow = () =>{
+    navigate('/contact')
+  }
+
   // React.useEffect(() => {
   //   setTotalPrice(
   //     data.reduce((acc, item) => acc + item.price * item.quantity, 0)
@@ -58,7 +63,7 @@ export default function Cart() {
         <tbody className="text-white">
           {data.map((item) => (
             <tr key={item.id}>
-              <td>{item.name}</td>
+              <td>{item.title}</td>
               
               <td>{item.quantity}</td>
               <td>
@@ -70,11 +75,17 @@ export default function Cart() {
         </tbody>
       </table>
       {/* <h2 className='cart-total'> Total: ₹{totalPrice.toFixed(2)}</h2> */}
+      <center>
+      <div className="btn1">
       <button onClick={clearCart} className='cart-clear'>Clear Cart</button>
+      </div>
+      <div className="btn1">
+      <button onClick={orderNow} className='cart-clear'>Order Now</button>
+      </div>
+      </center>
     </div>
     </section>
     </>
-   
   );
 }
 

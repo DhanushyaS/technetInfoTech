@@ -144,7 +144,7 @@
 		transform: rotate(360deg);
 	}
 }
-form 
+.contact-form 
 {
 	position: absolute;
 	inset: 2px;
@@ -252,4 +252,33 @@ input[type="submit"]
 input[type="submit"]:active 
 {
 	opacity: 0.8;
+}
+.content{
+    display: flex;
+    min-height: 110vh;
+}
+.content section{
+    margin-top: 6vh;
+    margin-left: 20vh;
+}
+.content-form{
+    margin-top: 7rem;
+}
+section i{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+    text-align: center;
+}
+section h1{
+	color: cyan;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+}
+section p{
+	color:white;
+	font-weight: 500;
+	letter-spacing: 0.1em;
 }
